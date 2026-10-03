@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Fredoka", sans-serif;
+
+    background-image: linear-gradient(to bottom,
+        #9dcfec,
+        #fff
+    );
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    transition: 0.5s;
+}
+
+#caixa{
+    position: relative;
+    width: 50%;
+    background-color: #fff;
+    padding: 160px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, alpha);
+    animation: 1s ease;
+}
+
+#titulo{
+    color: rgb(252, 110, 181);
+    margin-bottom: 15px;
+    font-size: 32px;
+}
+
+#texto{
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+#peppa{
+    width: 300px;
+    display: block;
+    margin: 0 auto 20px;
+    animation: pular 2s ease-in-out infinite;
+}
+
+button{
+    font-family: "Fredoka", sans-serif;
+    border: none;
+    padding: 12px 20px;
+    margin: 5px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 22px;
+}
+
+#botao{
+    background-color: #ff8fbf;
+    color: #fff;
+}
+
+#botao:hover{
+    transform: scale(1.08);
+}
+
+#tema{
+    background-color: #555;
+    color: #fff;
+}
+
+#tema:hover{
+    transform: scale(1.08);
+}
+
+#nuvem{
+    position: absolute;
+    width: 100px;
+    top: 15px;
+    left: 40px;
+
+    animation: nuvem 5s ease-in-out infinite;
+}
+
+#flor{
+    position: absolute;
+    width: 60px;
+    bottom: 15px;
+    animation: 4s linear infinite;
+}
+
+@keyframes aparecer{
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pular{
+    0%, 100%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes nuvem{
+    0%, 100%{
+        transform: translateX(0);
+    }
+
+    50%{
+        transform: translateX(30px);
+    }
+}
+
+body.escuro{
+    background-image: linear-gradient(to bottom,
+        #151616,
+        #212746
+    );
+}
+
+body.escuro #caixa{
+    background-color: #111111;
+}
+
+
+body.escuro #texto{
+    color: #fff;
+}
